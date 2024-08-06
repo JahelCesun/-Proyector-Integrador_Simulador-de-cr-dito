@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulador de Créditos</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Simulador de Créditos</h1>
+        <div class="calculator">
+            <label for="loanType">Tipo de Crédito:</label>
+            <select id="loanType">
+                <option value="personal">Personal</option>
+                <option value="hipotecario">Hipotecario</option>
+                <option value="automotriz">Automotriz</option>
+            </select>
+
+            <label for="principal">Monto del Crédito:</label>
+            <input type="number" id="principal" placeholder="Ej: 100000" required>
+
+            <label for="rate">Tasa de Interés Anual (%):</label>
+            <input type="number" id="rate" placeholder="Ej: 5" step="0.01" required>
+
+            <label for="time">Tiempo (Años):</label>
+            <input type="number" id="time" placeholder="Ej: 5" required>
+
+            <label for="periodType">Tipo de Período:</label>
+            <select id="periodType">
+                <option value="años">Años</option>
+                <option value="semestres">Semestres</option>
+                <option value="trimestres">Trimestres</option>
+                <option value="bimestres">Bimestres</option>
+            </select>
+
+            <label for="calculationType">Tipo de Cálculo:</label>
+            <select id="calculationType">
+                <option value="simple">Interés Simple</option>
+                <option value="compuesto">Interés Compuesto</option>
+                <option value="valorFuturo">Anualidad Valor Futuro</option>
+                <option value="valorPresente">Anualidad Valor Presente</option>
+            </select>
+
+            <button onclick="calculate()">Calcular</button>
+
+            <div id="result"></div>
+        </div>
+    </div>
+    <script src="scripts.js"></script>
+</body>
+</html>
